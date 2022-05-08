@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
+use Illuminate\Support\Facades\Cookie;
 
 class AuthController extends Controller
 {
@@ -32,7 +33,13 @@ class AuthController extends Controller
             'password' => 'required|max:16|min:8',
         ]);
 
-        $result = $this->guzzlePost($postData);
+        $result = $this->guzzlePost('register', $postData);
+
+        if ($result['http_status'] === 201) {
+            return response()->redirectTo('/')->cookie('_cyouho', $result['response_contents']['session'], 60);
+        } else {
+            return back()->with('email', 'User aleardy exitsed or something others error occred');
+        }
     }
 
     public function doLogin(Request $request)
@@ -42,14 +49,33 @@ class AuthController extends Controller
             'password' => 'required|max:16|min:8',
         ]);
 
-        $result = $this->guzzlePost($postData);
+        $result = $this->guzzlePost('login', $postData);
+
+        if ($result['http_status'] === 200) {
+            return response()->redirectTo('/')->cookie('_cyouho', $result['response_contents']['session'], 60);
+        } else if ($result['response_contents']['api_status_code'] === 40401) {
+            return back()->with('email', $result['response_contents']['message']);
+        } else if ($result['response_contents']['api_status_code'] === 40402) {
+            return back()->with('password', $result['response_contents']['message']);
+        }
     }
 
-    private function guzzlePost(array $postData = [])
+    public function doLogout()
+    {
+        $cookie = Cookie::forget('_cyouho');
+        $userCookie = request()->cookie('_cyouho');
+
+        $result = $this->guzzlePost('logout');
+
+        $cookie = Cookie::forget('_cyouho');
+        return response()->redirectTo('/')->cookie($cookie);
+    }
+
+    private function guzzlePost(string $urlName, array $postData = [])
     {
         try {
             $client = new Client();
-            $response = $client->request('POST', $this->_url['register'], [
+            $response = $client->request('POST', $this->_url[$urlName], [
                 'header' => [
                     'Accept' => 'application/json',
                 ],
@@ -66,5 +92,10 @@ class AuthController extends Controller
             report($e);
             return back();
         }
+
+        return [
+            'http_status' => $statusCode,
+            'response_contents' => $response,
+        ];
     }
 }
