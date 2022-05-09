@@ -25,7 +25,7 @@ class AuthStatus
             redirect('/login')->send();
         }
 
-        $url = config('serversurl');
+        $url = config('serverurl');
 
         try {
             $client = new Client();
@@ -57,7 +57,7 @@ class AuthStatus
             'is_login' => TRUE,
         ];
 
-        $request->merge($globalData); // 将 $globalData 穿入控制器中
+        $request->merge($globalData); // 将 $globalData 传入控制器中
 
         view()->share('global_data', $globalData);
         return $next($request);

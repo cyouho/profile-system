@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\IndexController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +15,9 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 /*
 |--------------------------------------------------------------------------
@@ -37,4 +37,7 @@ Route::middleware(['auth.check'])->group(function () {
 
     Route::post('/doRegister', [AuthController::class, 'doRegister'])->withoutMiddleware(['auth.check']);
     Route::post('/doLogin', [AuthController::class, 'doLogin'])->withoutMiddleware(['auth.check']);
+
+    Route::get('/', [HomeController::class, 'index']);
+    Route::get('/setting', [HomeController::class, 'setting']);
 });

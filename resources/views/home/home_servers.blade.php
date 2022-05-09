@@ -1,0 +1,36 @@
+<table class="table tabel-blue">
+    <thead>
+        <tr>
+            <th>服务名</th>
+            <th>注册时间</th>
+            <th>修改时间</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>Doe</td>
+            <td>前往</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>Doe</td>
+            <td>前往</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>Doe</td>
+            <td>前往</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>Doe</td>
+            <td>前往</td>
+        </tr>
+    </tbody>
+</table>
