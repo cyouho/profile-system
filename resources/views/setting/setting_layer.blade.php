@@ -6,7 +6,7 @@
 
 <body>
     @include('global.global_navbar')
-    @include('home.home_contents')
+    @include('setting.setting_contents')
     @include('global.global_footer')
 </body>
 
