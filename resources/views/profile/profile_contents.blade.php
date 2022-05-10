@@ -5,7 +5,7 @@
                 个人信息:
             </a>
             <br><br>
-            @include('home.home_profile')
+            @include('profile.profile_data')
         </div>
     </div>
     <div class="jumbotron p-4 p-md-5 text-blue rounded bg-blue">
@@ -14,7 +14,7 @@
                 已注册服务:
             </a>
             <br><br>
-            @include('home.home_servers')
+            @include('profile.profile_servers')
         </div>
     </div>
 </main>

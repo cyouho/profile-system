@@ -38,6 +38,7 @@ Route::middleware(['auth.check'])->group(function () {
     Route::post('/doRegister', [AuthController::class, 'doRegister'])->withoutMiddleware(['auth.check']);
     Route::post('/doLogin', [AuthController::class, 'doLogin'])->withoutMiddleware(['auth.check']);
 
-    Route::get('/', [HomeController::class, 'index']);
+    Route::get('/profile', [HomeController::class, 'profile']);
     Route::get('/setting', [HomeController::class, 'setting']);
+    Route::get('/', [HomeController::class, 'home']);
 });
