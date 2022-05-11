@@ -1,20 +1,20 @@
 <main class="container">
-    <div class="jumbotron p-4 p-md-5 text-blue rounded bg-blue">
-        <div>
-            <a class="title-text">
-                个人信息:
-            </a>
-            <br><br>
-            @include('home.home_profile')
+    <div class="row m-auto">
+        <div class="col">
+            <div class="jumbotron rounded p-4 p-md-5 custom-jumbotron bg-blue text-blue">
+                <p>学的不仅是技术，更是梦想！！！</p>
+            </div>
         </div>
-    </div>
-    <div class="jumbotron p-4 p-md-5 text-blue rounded bg-blue">
-        <div>
-            <a class="title-text">
-                已注册服务:
-            </a>
-            <br><br>
-            @include('home.home_servers')
+        <div class="col">
+            <div class="jumbotron rounded p-4 p-md-5 custom-jumbotron bg-green text-green">
+                <h4>家用货架管理系统</h4>
+                <a href="#">点击进入</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="jumbotron rounded p-4 p-md-5 custom-jumbotron">
+                <p>学的不仅是技术，更是梦想！！！</p>
+            </div>
         </div>
     </div>
 </main>

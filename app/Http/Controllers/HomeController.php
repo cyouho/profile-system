@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function profile()
     {
-        return view('home.home_layer', ['page_data' => [
+        return view('profile.profile_layer', ['page_data' => [
             'page_title' => '个人中心',
         ]]);
     }
@@ -17,6 +17,13 @@ class HomeController extends Controller
     {
         return view('setting.setting_layer', ['page_data' => [
             'page_title' => '设置',
+        ]]);
+    }
+
+    public function home()
+    {
+        return view('home.home_layer', ['page_data' => [
+            'page_title' => 'CYOUHO',
         ]]);
     }
 }
