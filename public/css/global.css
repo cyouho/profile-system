@@ -21,7 +21,15 @@
     background-color: rgb(126, 131, 169);
 }
 
+.bg-green {
+    background-color: rgb(109, 146, 134);
+}
+
 .text-blue {
+    color: rgb(232, 255, 247);
+}
+
+.text-green {
     color: rgb(232, 255, 247);
 }
 
@@ -88,4 +96,13 @@
 
 .servers-buttom-size:hover {
     background-color: rgb(225, 228, 255);
+}
+
+.custom-jumbotron {
+    height: 150px;
+    width: 100%;
+}
+
+.custom-jumbotron:hover {
+    filter: brightness(1.2);
 }
