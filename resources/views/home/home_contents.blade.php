@@ -8,7 +8,7 @@
         <div class="col">
             <div class="jumbotron rounded p-4 p-md-5 custom-jumbotron bg-green text-green">
                 <h4>家用货架管理系统</h4>
-                <a href="#">点击进入</a>
+                <i class="bi-arrow-right-circle"></i>&nbsp;<a class="link-text" href="http://127.0.0.3:8000">点击进入</a>
             </div>
         </div>
         <div class="col">
