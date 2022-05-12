@@ -103,6 +103,10 @@
     width: 100%;
 }
 
-.custom-jumbotron:hover {
-    filter: brightness(1.2);
+.link-text {
+    color: rgb(237, 239, 255);
+}
+
+.link-text:hover {
+    color: rgb(245, 246, 255);
 }
