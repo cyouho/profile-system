@@ -36,7 +36,7 @@ class AuthController extends Controller
         $result = $this->guzzlePost('register', $postData);
 
         if ($result['http_status'] === 201) {
-            return response()->redirectTo('/')->cookie('_cyouho', $result['response_contents']['session'], 60);
+            return response()->redirectTo('/')->cookie('_cyouho', $result['response_contents']['session'], 60, '/', 'cyouho.com');
         } else {
             return back()->with('email', 'User aleardy exitsed or something others error occred');
         }
@@ -52,7 +52,7 @@ class AuthController extends Controller
         $result = $this->guzzlePost('login', $postData);
 
         if ($result['http_status'] === 200) {
-            return response()->redirectTo('/')->cookie('_cyouho', $result['response_contents']['session'], 60);
+            return response()->redirectTo('/')->cookie('_cyouho', $result['response_contents']['session'], 60, '/', 'cyouho.com');
         } else if ($result['response_contents']['api_status_code'] === 40401) {
             return back()->with('email', $result['response_contents']['message']);
         } else if ($result['response_contents']['api_status_code'] === 40402) {
