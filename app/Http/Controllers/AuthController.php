@@ -62,7 +62,7 @@ class AuthController extends Controller
 
     public function doLogout()
     {
-        $cookie = Cookie::forget('_cyouho');
+        $cookie = Cookie::forget('_cyouho', '/', 'cyouho.com');
         $userCookie = request()->cookie('_cyouho');
 
         $postData = [
@@ -71,8 +71,7 @@ class AuthController extends Controller
 
         $result = $this->guzzlePost('logout', $postData);
 
-        $cookie = Cookie::forget('_cyouho');
-        return response()->redirectTo('/')->cookie($cookie);
+        return response()->redirectTo('/')->withCookie($cookie);
     }
 
     private function guzzlePost(string $urlName, array $postData = [])
