@@ -23,7 +23,7 @@ class HomeController extends Controller
     public function home()
     {
         return view('home.home_layer', ['page_data' => [
-            'page_title' => 'CYOUHO',
+            'page_title' => '应用中心',
         ]]);
     }
 }
