@@ -3,13 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\ProfileController;
 
 class HomeController extends Controller
 {
-    public function profile()
+    public function profile(Request $request)
     {
+        $profileData = new ProfileController();
+
+        $userId = $request->input('user_id');
+        $data = $profileData->getProfiledata($userId);
+
         return view('profile.profile_layer', ['page_data' => [
             'page_title' => '个人中心',
+            'profile_data' => $data['http_status'] === 200 ? $data['response_contents'][0] : null,
         ]]);
     }
 
