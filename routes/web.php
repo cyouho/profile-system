@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,4 +42,6 @@ Route::middleware(['auth.check'])->group(function () {
     Route::get('/profile', [HomeController::class, 'profile']);
     Route::get('/setting', [HomeController::class, 'setting']);
     Route::get('/', [HomeController::class, 'home']);
+
+    Route::post('/resetUserName', [SettingController::class, 'resetUserName']);
 });

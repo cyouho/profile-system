@@ -20,10 +20,15 @@ class HomeController extends Controller
         ]]);
     }
 
-    public function setting()
+    public function setting(Request $request)
     {
+        $userId = $request->input('user_id');
+
         return view('setting.setting_layer', ['page_data' => [
             'page_title' => '设置',
+            'setting_data' => [
+                'user_id' => $userId,
+            ],
         ]]);
     }
 
