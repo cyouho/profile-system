@@ -36,5 +36,6 @@ return [
 
     'user_account_data' => [
         'get_user_account_data' => constant('PROFILE_API_DOMAIN') . constant('PROFILE_API_PORT') . '/api/v1/user/',
-    ]
+    ],
+    'user_reset_name' => constant('PROFILE_API_DOMAIN') . constant('PROFILE_API_PORT') . '/api/v1/user/',
 ];
