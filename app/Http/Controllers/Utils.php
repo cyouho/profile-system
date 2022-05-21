@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 
+/**
+ * Utils for Controllers.
+ * 控制器的工具类
+ */
 class Utils extends Controller
 {
     public static function guzzleGet(string $url)
