@@ -12,6 +12,13 @@ use GuzzleHttp\Exception\ClientException;
  */
 class Utils extends Controller
 {
+    /**
+     * Guzzle for Get Methed.
+     * guzzle的get方法
+     * 
+     * @param string $url <url for api | api的get方法url>
+     * @return array <http_status, response_contents>
+     */
     public static function guzzleGet(string $url)
     {
         try {
@@ -40,6 +47,15 @@ class Utils extends Controller
     {
     }
 
+
+    /**
+     * Guzzle for Put Methed.
+     * guzzle的put方法
+     * 
+     * @param string $url <url for api | api的put方法url>
+     * @param array $putData <put data>
+     * @return array <http_status, response_contents>
+     */
     public static function guzzlePut(string $url, array $putData)
     {
         try {
