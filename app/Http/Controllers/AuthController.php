@@ -9,18 +9,34 @@ use Illuminate\Support\Facades\Cookie;
 
 class AuthController extends Controller
 {
+    /**
+     * API URLs.
+     * 各种API的url
+     */
     private $_url = [];
 
+    /**
+     * Get API URLs.
+     * 获取API的url的构造方法
+     */
     public function __construct()
     {
         $this->_url = config('serverurl');
     }
 
+    /**
+     * Show Register Page.
+     * 显示注册页面
+     */
     public function showRegisterPage()
     {
         return view('auth.register');
     }
 
+    /**
+     * Show Login Page.
+     * 显示登陆页面
+     */
     public function showLoginPage()
     {
         return view('auth.login');
