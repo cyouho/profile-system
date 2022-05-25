@@ -42,6 +42,14 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
+    /**
+     * Register function.
+     * 注册方法
+     * 
+     * @param Request $request <input data | 输入数据>
+     * 
+     * @return mix <page or err msg | 主页或错误信息>
+     */
     public function doRegister(Request $request)
     {
         $postData = $request->validate([
