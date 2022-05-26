@@ -66,6 +66,14 @@ class AuthController extends Controller
         }
     }
 
+    /**
+     * Login function.
+     * 登录方法
+     * 
+     * @param Request $request <input data | 输入数据>
+     * 
+     * @return mix <page or err msg | 主页或错误信息>
+     */
     public function doLogin(Request $request)
     {
         $postData = $request->validate([
