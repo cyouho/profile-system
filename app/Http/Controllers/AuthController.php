@@ -92,6 +92,12 @@ class AuthController extends Controller
         }
     }
 
+    /**
+     * Logout function.
+     * 退出/登出方法
+     * 
+     * @return Response mix
+     */
     public function doLogout()
     {
         $cookie = Cookie::forget('_cyouho', '/', 'cyouho.com');
@@ -106,6 +112,15 @@ class AuthController extends Controller
         return response()->redirectTo('/')->withCookie($cookie);
     }
 
+    /**
+     * Guzzle post function.
+     * guzzle的post方法
+     * 
+     * @param string $urlName <url for post | post的url>
+     * @param array $postData <post data | post的数据>
+     * 
+     * @return array <http_status, response_contents | http状态码，response内容>
+     */
     private function guzzlePost(string $urlName, array $postData = [])
     {
         try {
