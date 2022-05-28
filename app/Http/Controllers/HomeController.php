@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProfileController;
 
+/**
+ * Show page class.
+ * 显示各个页面用类
+ */
 class HomeController extends Controller
 {
     public function profile(Request $request)
