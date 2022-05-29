@@ -11,6 +11,14 @@ use App\Http\Controllers\ProfileController;
  */
 class HomeController extends Controller
 {
+    /**
+     * Get profile page datas.
+     * 获取profile页面的数据
+     * 
+     * @param Request $request <IO data | 输入流数据>
+     * 
+     * @return mix
+     */
     public function profile(Request $request)
     {
         $profileData = new ProfileController();
