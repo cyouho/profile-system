@@ -32,6 +32,10 @@ class HomeController extends Controller
         ]]);
     }
 
+    /**
+     * Get setting page datas.
+     * 获取设置页面数据
+     */
     public function setting(Request $request)
     {
         $userId = $request->input('user_id');
