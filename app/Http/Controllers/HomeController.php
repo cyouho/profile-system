@@ -35,6 +35,10 @@ class HomeController extends Controller
     /**
      * Get setting page datas.
      * 获取设置页面数据
+     * 
+     * @param Request $request <IO data | 输入流数据>
+     * 
+     * @return mix
      */
     public function setting(Request $request)
     {
@@ -48,6 +52,10 @@ class HomeController extends Controller
         ]]);
     }
 
+    /**
+     * Get home page datas.
+     * 获取home页面数据
+     */
     public function home()
     {
         return view('home.home_layer', ['page_data' => [
