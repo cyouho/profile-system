@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Utils as ControllerUtils;
 
+/**
+ * Profile controller.
+ * 个人主页控制器
+ */
 class ProfileController extends Controller
 {
     private $_user_account_api_url = [];
