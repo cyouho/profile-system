@@ -11,8 +11,16 @@ use App\Http\Controllers\Utils as ControllerUtils;
  */
 class ProfileController extends Controller
 {
+    /**
+     * API Urls.
+     * API的url
+     */
     private $_user_account_api_url = [];
 
+    /**
+     * construct function for get API Urls.
+     * 获取API的Url的构造方法
+     */
     public function __construct()
     {
         $this->_user_account_api_url = config('serverurl.user_account_data');
