@@ -5,8 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Utils as ControllerUtils;
 
+/**
+ * Setting controller.
+ * 设置控制器
+ */
 class SettingController extends Controller
 {
+    /**
+     * API Urls.
+     * API的URL
+     */
     private $_url = [];
 
     public function __construct()
