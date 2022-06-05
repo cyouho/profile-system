@@ -17,6 +17,10 @@ class SettingController extends Controller
      */
     private $_url = [];
 
+    /**
+     * construct function.
+     * 控制器构造方法
+     */
     public function __construct()
     {
         $this->_url = config('serverurl');
