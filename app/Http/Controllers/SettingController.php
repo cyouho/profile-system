@@ -26,6 +26,14 @@ class SettingController extends Controller
         $this->_url = config('serverurl');
     }
 
+    /**
+     * Reset user name function.
+     * 重置用户名方法
+     * 
+     * @param Request $request <IO data | 输入数据>
+     * 
+     * @return mix
+     */
     public function resetUserName(Request $request)
     {
         $postData = $request->validate([
