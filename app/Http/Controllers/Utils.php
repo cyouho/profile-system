@@ -43,6 +43,12 @@ class Utils extends Controller
         ];
     }
 
+    /**
+     * Guzzle for Post Methed.
+     * guzzle的post方法
+     * 
+     * 
+     */
     public static function guzzlePost()
     {
     }
