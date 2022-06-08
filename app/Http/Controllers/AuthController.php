@@ -7,6 +7,10 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Cookie;
 
+/**
+ * Auth Controller.
+ * 登录登出类
+ */
 class AuthController extends Controller
 {
     /**
