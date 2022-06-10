@@ -53,6 +53,14 @@ class Utils extends Controller
     {
     }
 
+    /**
+     * Guzzle for Delete Methed.
+     * guzzle的delete方法
+     */
+    public static function guzzleDelete()
+    {
+    }
+
 
     /**
      * Guzzle for Put Methed.
