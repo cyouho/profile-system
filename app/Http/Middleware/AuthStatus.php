@@ -12,6 +12,7 @@ class AuthStatus
 {
     /**
      * Handle an incoming request.
+     * 判断用户是否登录方法
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
