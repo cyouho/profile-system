@@ -8,6 +8,10 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Cookie;
 
+/**
+ * Auth Status Check Middleware.
+ * 登录状态检查中间件
+ */
 class AuthStatus
 {
     /**
