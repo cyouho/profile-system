@@ -56,6 +56,7 @@ class AuthStatus
             report($e);
         }
 
+        // 全局使用的参数，用户ID，用户名，是否登录
         $globalData = [
             'user_id' => $response['user_id'],
             'user_name' => $response['user_name'],
